@@ -1,0 +1,22 @@
+{
+  "name": "remotespark",
+  "version": "4.7",
+  "authors": [
+    "Damir Garifullin <gosugdr@gmail.com>"
+  ],
+  "description": "RemoteSpark frontend package",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "remotespark"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.remotespark.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
