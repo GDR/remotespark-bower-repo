@@ -5,7 +5,7 @@
     "Damir Garifullin <gosugdr@gmail.com>"
   ],
   "description": "RemoteSpark frontend package",
-  "main": "",
+  "main": "rdp_min.js",
   "moduleType": [],
   "keywords": [
     "remotespark"
