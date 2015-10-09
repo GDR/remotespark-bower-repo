@@ -10,7 +10,7 @@
     "surface_min.js",
     "hi5_min.js",
     "config_min.js",
-    "./css/rdp.css"
+    "./css/rdp.css",
     "./css/hi5.css"
   ],
   "moduleType": [],
