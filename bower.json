@@ -6,8 +6,8 @@
   ],
   "description": "RemoteSpark frontend package",
   "main": [
-    "surface_min.js",
     "hi5_min.js",
+    "surface_min.js",
     "rdp_min.js",
     "config_min.js",
     "./css/rdp.css",
