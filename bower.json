@@ -9,6 +9,8 @@
     "hi5_min.js",
     "surface_min.js",
     "rdp_min.js",
+    "resource.js",
+    "string-en.js",
     "./css/rdp.css",
     "./css/hi5.css"
   ],
