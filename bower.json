@@ -10,6 +10,7 @@
     "surface_min.js",
     "rdp_min.js",
     "resource.js",
+    "strings-en.js",
     "appcfg.js",
     "./css/rdp.css",
     "./css/hi5.css",
