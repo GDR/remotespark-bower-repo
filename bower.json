@@ -12,7 +12,8 @@
     "resource.js",
     "string-en.js",
     "./css/rdp.css",
-    "./css/hi5.css"
+    "./css/hi5.css",
+    "./images/*"
   ],
   "moduleType": [],
   "keywords": [
