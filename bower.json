@@ -11,6 +11,7 @@
     "rdp_min.js",
     "resource.js",
     "string-en.js",
+    "appcfg.js",
     "./css/rdp.css",
     "./css/hi5.css",
     "./images/*"
