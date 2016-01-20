@@ -99,6 +99,12 @@ background-color:#0F0;
 	vertical-align: top;
 }
 
+#wsinput{
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
 #wsinput::selection, #svTouchInput::selection{
 	background:rgba(0, 0, 0, 0);
 }

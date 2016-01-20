@@ -112,8 +112,8 @@ function Gateway(addr){
 		ws.close();
 	};
 	
-	this.login = function(pwd){
-		exeCommand("12" + pwd);
+	this.login = function(pwd, hashed){
+		exeCommand((hashed ? "16" : "12") + pwd);
 	};
 	
 }
