@@ -32,9 +32,11 @@ var __svi18n = {
 		'sessionPaused' : '連接被管理員暫停',
         'sessionResumed': '鏈接暫停結束',
         'autoresume': '請注意你的連接處於暫停狀態，如果點擊同意，暫停就會被終止。',
-        'user': 'login as: ',
-        'password': 'password: ',
-        'copylable': 'Copy'
+        'user': '登錄: ',
+        'password': '密碼: ',
+        'copylable': '拷貝',
+        'download': '下載檔案',
+        'fileReady': '下載完成'
 	},
 	errorCode : {
 		'1' : '連接被伺服器端的另一個連接中的管理工具關閉。',
@@ -88,7 +90,8 @@ var __svi18n = {
 		'S3014' : '失效的鏈接地址',
 		'S3015' : '鏈接保護密碼錯誤',
         'S3016': '沒有足夠的空間。',
-        'S3017': '無法連接遠程計算機：計算機不可用或者遠程桌面未啓用。'
+        'S3017': '無法連接遠程計算機：計算機不可用或者遠程桌面未啓用。',
+		'S3018' : '該文件已被禁止。'
 	},
 	serverStatus : {
 		'401' : '發現目標計算機。',
@@ -115,8 +118,8 @@ var __svi18n = {
 		'filecontainer' : '<div id="total" class="progressback" style="display: none">\
                         上傳中...<div class="progressfront"></div>\
                         </div>\
-                        <div class="th">您的位置： <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple />\
-							<input type="button" id="__cancelUpload" style="visibility:hidden" value="取消上傳"><span id="__diskSpace"></span></div>\
+                        <div class="th"><button id="__sv_position__">您的位置：</button> <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple />\
+							<input type="button" id="__cancelUpload" style="visibility:hidden" value="取消上傳"><span id="__diskSpace"></span><input id="__sv_folder_name_" placeholder="資料夾名" ><img id="__sv_folder__" src="' + getLibPath('resource.js') + '/folder.png" align="center" name="folder" title="新建資料夾" ></div>\
                         <table id="filelist" summary="File List">\
                         <thead>\
                             <tr>\

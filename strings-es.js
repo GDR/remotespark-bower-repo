@@ -26,13 +26,15 @@ var __svi18n = {
 			'copy': 'Utilice Ctrl+C o el menú Editar del navegador para copiar el contenido.<br>Para imagenes, utilice "Copiar imagen" o seleccione la imagen y copiela.<br><br>Utilice "Pegado especial - Bitmap independiente del dispositivo" en Office si está copiando una imagen desde IE.',
 			'copyWarning': 'Por favor utilice el diálogo copiar para copiar imagen y/o contenido.',
 			'reqjoin': 'Solicitando unirse...',
-            'recready': 'Recorded file is ready. Please right click and save the link.',
-            'sessionPaused': 'You session has been paused by administrator',
-            'sessionResumed': 'You session has been resumed',
+            'recready': 'Archivo grabado está listo. Por favor, haga clic derecho y guardar el enlace.',
+            'sessionPaused': 'Su sesión ha sido detenido por el administrador',
+            'sessionResumed': 'Su sesión se ha reanudado',
             'autoresume': 'Be aware that your session is paused. If you click Yes your session will be resumed.',
-            'user': 'login as: ',
-            'password': 'password: ',
-            'copylable': 'Copy'
+            'user': 'Entrar como: ',
+            'password': 'contraseña: ',
+            'copylable': 'Dupdo',
+            'download': 'Descargar archivos',
+            'fileReady': 'La descarga está lista'
         },
         errorCode: {
             '1': 'La desconexión fue iniciado por una herramienta administrativa en el servidor en otra sesión.',
@@ -87,7 +89,8 @@ var __svi18n = {
             'S3014': 'Symlink no válido.',
             'S3015': 'La contraseña del symlink es errónea.',
 			'S3016': 'No hay suficiente espacio libre en disco.',
-            'S3017': 'No se puede conectar con el equipo remoto: equipo no está disponible o Escritorio remoto no está habilitado.'
+            'S3017': 'No se puede conectar con el equipo remoto: equipo no está disponible o Escritorio remoto no está habilitado.',
+            'S3018': 'El archivo está bloqueado.'
         },
         serverStatus: {
             '401': 'El equipo de destino se ha localizado.',
@@ -114,8 +117,8 @@ var __svi18n = {
             'filecontainer': '<div id="total" class="progressback" style="display: none">\
                             Actualizando...<div class="progressfront"></div>\
                         </div>\
-						<div class="th">Carpeta: <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple /> \
-            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="Cancel uploading"><span id="__diskSpace"></span></div>\
+						<div class="th"><button id="__sv_position__">Carpeta:</button> <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple /> \
+            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="Cancel uploading"><span id="__diskSpace"></span><input id="__sv_folder_name_" placeholder="Nombre de la carpeta" ><img id="__sv_folder__" src="' + getLibPath('resource.js') + '/folder.png" align="center" name="folder" title="Carpeta nueva" ></div>\
                         <table id="filelist" summary="File List">\
                         <thead>\
                             <tr>\
@@ -132,7 +135,7 @@ var __svi18n = {
                                 <td></td>\
                                 <td align="right"></td>\
                                 <td></td>\
-                                <td><img id="__sv_download__" src="' + getLibPath('connect2site-resource.js') + '/download.png" title="Descargar" name="download"><img id="__sv_view__" src="' + getLibPath('connect2site-resource.js') + '/view.png" name="view" title="Visualizar"><img id="__sv_del__" src="' + getLibPath('connect2site-resource.js') + '/del.png" name="delete" title="Eliminar"></td>\
+                                <td><img id="__sv_download__" src="' + getLibPath('resource.js') + '/download.png" title="Descargar" name="download"><img id="__sv_view__" src="' + getLibPath('resource.js') + '/view.png" name="view" title="Visualizar"><img id="__sv_del__" src="' + getLibPath('resource.js') + '/del.png" name="delete" title="Eliminar"></td>\
                             </tr>\
                         </tbody>\
                         </table>',

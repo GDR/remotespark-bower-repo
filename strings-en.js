@@ -32,7 +32,9 @@ var __svi18n = {
             'autoresume': 'Be aware that your session is paused. If you click Yes your session will be resumed.',
             'user': 'login as: ',
             'password': 'password: ',
-            'copylable': 'Copy'
+            'copylable': 'Copy',
+            'download': 'Download files',
+            'fileReady': 'Downloading is ready'
         },
         errorCode: {
             '1': 'The disconnection was initiated by an administrative tool on the server in another session.',
@@ -87,7 +89,8 @@ var __svi18n = {
             'S3014': 'Invalid symlink',
             'S3015': 'Wrong symlink password',
             'S3016': 'There is not enough free disk space.',
-            'S3017': 'Can not connect to the remote computer: computer is not available or Remote Desktop is not enabled.'
+            'S3017': 'Can not connect to the remote computer: computer is not available or Remote Desktop is not enabled.',
+            'S3018': 'File is blocked.'
         },
         serverStatus: {
             '401': 'The destination computer is being located.',
@@ -114,8 +117,8 @@ var __svi18n = {
             'filecontainer': '<div id="total" class="progressback" style="display: none">\
                             Uploading...<div class="progressfront"></div>\
                         </div>\
-                        <div class="th">Your Position: <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple /> \
-            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="Cancel uploading"><span id="__diskSpace"></span></div>\
+                        <div class="th"><button id="__sv_position__">Your Position:</button> <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple /> \
+            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="Cancel uploading"><span id="__diskSpace"></span><input id="__sv_folder_name_" placeholder="folder name" ><img id="__sv_folder__" src="' + getLibPath('resource.js') + '/folder.png" align="center" name="folder" title="New folder" ></div>\
                         <table id="filelist" summary="File List">\
                         <thead>\
                             <tr>\

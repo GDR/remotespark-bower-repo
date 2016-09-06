@@ -27,12 +27,14 @@ var __svi18n = {
             'copyWarning': 'Please use copy dialog to copy image/content.',
             'reqjoin': 'Requesting joining',
             'recready': 'Recorded file is ready. Please right click and save the link.',
-            'sessionPaused': 'You session has been paused by administrator',
-            'sessionResumed': 'You session has been resumed',
-            'autoresume': 'Be aware that your session is paused. If you click Yes your session will be resumed.',
-            'user': 'login as: ',
-            'password': 'password: ',
-            'copylable': 'Copy'
+            'sessionPaused': 'Ihre Sitzung wurde vom Administrator angehalten',
+            'sessionResumed': 'Ihre Sitzung wurde wieder aufgenommen',
+            'autoresume': 'Beachten Sie, dass Ihre Sitzung wird unterbrochen. Wenn Sie auf Ja, um Ihre Sitzung wieder aufgenommen werden.',
+            'user': 'Anmelden als ',
+            'password': 'passwort: ',
+            'copylable': 'Kopieren',
+            'download': 'Dateien herunterladen',
+            'fileReady': 'Der Download ist fertig'
         },
         errorCode: {
             '1': 'Die Verbindungsunterbrechung wurde von einem Administrationstool einer anderen Sitzung auf dem Server ausgel\u00F6st.',
@@ -87,7 +89,8 @@ var __svi18n = {
             'S3014': 'Ungültige Symlink',
             'S3015': 'Falsche Symlink Passwort',
             'S3016': 'Es ist nicht genügend freier Festplattenspeicher。',
-            'S3017': 'Eine Verbindung zum Server kann nicht hergestellt werden: der Server ist nicht verfügbar oder Remote Desktop ist nicht aktiviert!'
+            'S3017': 'Eine Verbindung zum Server kann nicht hergestellt werden: der Server ist nicht verfügbar oder Remote Desktop ist nicht aktiviert!',
+            'S3018': 'Die Datei ist gesperrt.'
         },
         serverStatus: {
             '401': 'Der Zielrechner wird lokalisiert.',
@@ -114,8 +117,8 @@ var __svi18n = {
             'filecontainer': '<div id="total" class="progressback" style="display: none">\
                         laden...<div class="progressfront"></div>\
                         </div>\
-                        <div class="th">Ihre Position: <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple />\
-            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="Abbrechen Hochladen"><span id="__diskSpace"></span></div>\
+                        <div class="th"><button id="__sv_position__">Ihre Position:</button> <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple />\
+            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="Abbrechen Hochladen"><span id="__diskSpace"></span><input id="__sv_folder_name_" placeholder="Ordnernamen" ><img id="__sv_folder__" src="' + getLibPath('resource.js') + '/folder.png" align="center" name="folder" title="neuer Ordner" ></div>\
                         <table id="filelist" summary="Dateiliste">\
                         <thead>\
                             <tr>\
