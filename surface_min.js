@@ -2459,6 +2459,12 @@ function LocalInterface(l) {
             if (k !== null) svGlobal.logger.info("Keyboard layout: " + d)
         };
         this.getKeyCode = function(a) {
+            if (a.key == 'б' || a.key == 'Б') return 188;
+            if (a.key == 'ю' || a.key == 'Ю') return 190;
+            if (a.key == 'ж' || a.key == 'Ж') return 186;
+            if (a.key == 'х' || a.key == 'Х') return 219;
+            if (a.key == 'э' || a.key == 'Э') return 222;
+            if (a.key == 'ъ' || a.key == 'Ъ') return 221;
             var c = 0;
             if (v) c = v(a.keyCode);
             if (!c) c = g ? g(a) : a.keyCode;
