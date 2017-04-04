@@ -34,6 +34,7 @@ background-color:#0F0;
 	width: 480px;
 	border-collapse: collapse;
 	text-align: left;
+	overflow: auto;
 }
 .th, #filelist th
 {
@@ -41,7 +42,7 @@ background-color:#0F0;
 	font-weight: normal;
 	color: #039;
 	padding: 10px 8px;
-	border-bottom: 2px solid #6678b1;
+	border-bottom: 2px solid #A7DBD8;
 }
 #filelist td
 {
@@ -49,24 +50,30 @@ background-color:#0F0;
 	color: #669;
 	padding: 6px 8px;
 }
+
+#filecontainer img:hover{
+	background-color: lightslategrey;
+}
+/*
 #filelist tbody tr:hover td
 {
 	background: #d0dafd;
 	color: #339;
 }
+*/
 
-.appdlg{
-	padding: 12px;margin: 0 0 6px 0;background-color: #030;
-	opacity: 0.9; color: #fff; font: normal 13px "Droid Sans", sans-serif;
-    border-radius: 3px; box-shadow: #999 0 0 12px;display:none
+.appdlg, .h5-form{
+	padding: 1em;margin: 0.5em;background-color: white;
+	font: normal 13px "Droid Sans", sans-serif;
+    border:1px solid #61D2D6;display: none;
 }
 
-.appdlg table{
-	border-spacing: 1em;
+.appdlg table, .h5-form table{
+	border-spacing: 0;
 }
 
 #pc_key{
-	position:fixed; top: 0; left: 2px; z-index:88;display:none;
+	position:fixed; top: 0; left: 2px; z-index:89;display:none;cursor: pointer;
 }
 
 .button{
@@ -88,16 +95,18 @@ background-color:#0F0;
     color:red;
 }
 
+
 #pc_key div{
 	display:none;
 }
 
-
+/*
 #svTouchInput{
 	autocorrect:off; autocomplete:off; autocapitalize:none; spellcheck:false; background:url(kbd.png) no-repeat left top; 
 	border:none; width:35px; height:35px; resize:none; color:rgba(0, 0, 0, 0); overflow: hidden; display:inline-block;
 	vertical-align: top;
 }
+*/
 
 #wsinput{
 	-webkit-box-sizing: content-box;
@@ -105,7 +114,7 @@ background-color:#0F0;
 	box-sizing: content-box;
 }
 
-#wsinput::selection, #svTouchInput::selection{
+#wsinput::selection{
 	background:rgba(0, 0, 0, 0);
 }
 
@@ -145,12 +154,42 @@ background-color:#0F0;
 	width:100%;
 }
 
-input[type=checkbox] {
-    vertical-align: middle;
-    min-height: 16px;
-    min-width: 16px;
- }
- 
+
 #deployJavaPlugin{position:absolute; left: -1000px;height:1px;width:1px}
 
+.svToolbar{
+	position: fixed;
+	top: 0;
+	display: table;
+	margin: 0 auto;
+}
+
+*:focus {
+    outline: none;
+}
+
+.h5-btn, .h5-form input[type="button"], .h5-form button, .h5-form input[type="submit"]{
+    background-color: #337ab7 ; 
+    border: 1px solid #2e6da4;
+	border-radius: 4px;
+	color:#FFF;
+}
+
+.h5-btn:active, .h5-form input[type="button"]:active, .h5-form button:active, .h5-form input[type="submit"]:active{
+	transform: translateY(2px);
+}
+
+.h5-btn:disabled, .h5-form input[type="button"]:disabled, .h5-form button:disabled, .h5-form input[type="submit"]:disabled{
+	cursor: not-allowed;
+	opacity: .65;
+}
+
+.h5-btn:hover, .h5-form input[type="button"]:hover, .h5-form button:hover, .h5-form input[type="submit"]:hover{
+	background-color: #2e6da4;
+}
+
+
+#__sv_folder__{
+	vertical-align: bottom;
+}
 /*canvas { background:url(rdp128.png) }*/

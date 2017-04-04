@@ -30,9 +30,13 @@ var __svi18n = {
             'sessionPaused': '连接被管理员暂停',
             'sessionResumed': '连接暂停结束',
             'autoresume': '请注意你的连接处于暂停状态。如果你点击同意，暂停就会被终止',
-            'user': 'login as: ',
-            'password': 'password: ',
-            'copylable': 'Copy'
+            'user': '登录: ',
+            'password': '密码: ',
+            'copylable': '复制',
+            'download': '下载文件',
+            'fileReady': '下载完成',
+            'imgCopyDownload': '请复制图像(使用右键菜单)或保存它如果程序不支持HTML格式',
+            'userCopy': '复制下列内容失败，请用右键菜单重新复制'
         },
         errorCode: {
             '1': '连接被服务器端的另一个连接中的管理工具关闭。',
@@ -86,7 +90,8 @@ var __svi18n = {
             'S3014': '无效的链接地址',
             'S3015': '链接保护密码错误',
             'S3016': '没有足够的空间。',
-            'S3017': '无法连接远程计算机: 计算机不可用或者远程桌面未启用.'
+            'S3017': '无法连接远程计算机: 计算机不可用或者远程桌面未启用。',
+            'S3018': '该文件已被禁止。'
         },
         serverStatus: {
             '401': '发现目标计算机。',
@@ -113,8 +118,8 @@ var __svi18n = {
             'filecontainer': '<div id="total" class="progressback" style="display: none">\
                         上传中...<div class="progressfront"></div>\
                         </div>\
-                        <div class="th">你的位置： <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple />\
-            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="取消上载"><span id="__diskSpace"></span></div>\
+                        <div class="th"><button id="__sv_position__">你的位置：</button> <span id="parentPath"></span><input type="file" id="uploadfile" name="upload" multiple />\
+            				<input type="button" id="__cancelUpload" style="visibility:hidden" value="取消上载"><span id="__diskSpace"></span><input id="__sv_folder_name_" placeholder="文件夹名称" ><img id="__sv_folder__" src="' + getLibPath('resource.js') + '/folder.png" align="center" name="folder" title="新建文件夹" ></div>\
                         <table id="filelist" summary="File List">\
                         <thead>\
                             <tr>\

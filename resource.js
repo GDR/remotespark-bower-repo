@@ -1,15 +1,19 @@
 function getLibPath(f) {
-      var tags = document.getElementsByTagName('script');
-      var j, s, result = null, len = tags.length;
-      for (var i = 0; i < len; i++) {
-        s = tags[i].src;
-        j = s.indexOf(f);
-        if (j > -1) {
-          result = s.substring(0, j);
-          break;
-        }
-      }
-      return result;
+	var result = window.__sv_lib_path || (window.hi5 && hi5.appcfg && hi5.appcfg.libpath) || '';
+	if (result){
+		return result;
+	}
+	var tags = document.getElementsByTagName('script');
+	var j, s, len = tags.length;
+	for (var i = 0; i < len; i++) {
+		s = tags[i].src;
+		j = s.indexOf(f);
+		if (j > -1) {
+			result = s.substring(0, j);
+			break;
+		}
+	}
+	return result;
 }
 
 function svloadResource() {
@@ -23,11 +27,11 @@ function svloadResource() {
 
     var nl = navigator.language || navigator.userLanguage;
 
-//    if ('console' in window){
-//    	console.log('User language:' + nl);
-//    }
-
     var libPath = getLibPath('resource.js');
+
+    if (!libPath) {
+        return;
+    }
 
     var lan = 'en';
 
@@ -43,15 +47,8 @@ function svloadResource() {
     	lan = 'es';
     }
 
-//    if ('console' in window){
-//    	console.log('lan:' + lan);
-//    }
-    
     libPath += ('strings-' + lan + '.js');
     
-//    if ('console' in window){
-//    	console.log('libPath resources:' + libPath);
-//    }
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = libPath;

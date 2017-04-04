@@ -1,7 +1,6 @@
 //You don't even need this file if you don't want to change the default values
-
 var hi5 = hi5 || {};
-
+//hi5.libPath = '';//Configure this libPath (raltive path to your web server root) if the Spark View JavaScript libraray is not in the same directory as the web page.
 hi5.appcfg = {
 //		displayMsg: false,//If display error or warning message, default is true
 //		appTimeout: 800,//Close the RemoteApp if no Windows found after this period, default is 800 ms.
@@ -18,13 +17,14 @@ hi5.appcfg = {
 //		printInNewTab: true,//Open print dialog in  new tab/window
 //		autoScale: false,//auto scale window when in join and player modes, default is true.
 //		domain:'defaultdomain',//default domain name
-//		params: 'url',//using url to transfer parameters, you can also choose 'cookie' or 'object', please check manual section 4.2.3
+		params: 'object',//using url to transfer parameters, you can also choose 'cookie' or 'object', please check manual section 4.2.3
 //      defaultPort: 20010,
 //		copyDialog: true,//using dialog to inform user when copying instead of writing local clipboard directly, default is false
 //      closeOnDisconn: false,//close popup window if RDP sessin get disconnected, default is true
 //      disableJoinedAppResize: true,//Disable remoteapp window resizing on joined sessions, default is false
 //		disableScrollbars: false, //Disable browser scrollbars, default is true
-//		wsPost: false,
+//		disableDVC: true,
+		// wsPost: true,
 //        startup:{//start up a server or remoteapp automatically after login.
 //        	server: "",//if server is "" or not found, the first one will be opened instead.
 //        	newWindow: false //if open in new window
@@ -32,7 +32,23 @@ hi5.appcfg = {
 //      existingFile: "replace", //replace, rename (default) when uploading,
 //		noConnected: true,//don't show connected computers to the user (for the drop list on rdp.html)
 //		joinCloseMode: 1,//1: keep joined sessions open after main session is closed. 0 (default): closed joined sessions too if main session is closed
-//		clearScreen: false,//if clear screen after session is disconnected, default is true
+//		clearScreen: false,//if clear screen after session is disconnected, default is true,
+//        pingInterval: 5,
+//        useImageCursor: true,
+//      disableCursor: true,
+//		disableAdjust: true,
+		// disableDVC: true,
+		// noMinimize: false,
+		// directClipAccess: true,
+//		disableMaxFullScn: true,
+		//  directClipAccess: true,
+//		enableTSMF: true,
+//		noCursorName: true,
+		// noMinimize: false,
+		// disableShortcuts: true,
+		// copyTextOnly: true,
+		//detectInput: true,
+		// useWorker: false,
 		img: {
 //			close: 'close.png',
 //			cloud: 'cloud.png',
@@ -46,7 +62,7 @@ hi5.appcfg = {
 //			link: 'link.png',//img for copied link
 //			copy: 'copy.png'//img for copy dialog
 		},
-		toolbar: {fadable: true},
+		toolbar: {fadable: true, draggable: true},
 		page:{
 //		    join: 'join.html',
 //          joinvnc: 'joinvnc.html',	    
